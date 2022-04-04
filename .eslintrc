@@ -1,19 +1,27 @@
 {
     "parser": "@typescript-eslint/parser",
+    "extends": ["react-app", "plugin:prettier/recommended"],
     "plugins": ["@typescript-eslint"],
-    "extends": ["prettier"],
     "rules": {
-        "quotes": [2, "single"],
-        "no-console": "off",
-        "no-duplicate-imports": 2,
-        "object-literal-sort-keys": 0,
-        "no-trailing-whitespace": 0,
-        "max-classes-per-file": [2, 15]
-    },
-    "ignorePatterns": [
-        "**/config/**/*.js",
-        "**.node_modules/**/*.{ts,js,tsx,jsx}",
-        "**/coverage/lcov-report/*.js",
-        "**/public/webcomponentjs"
-    ]
+        "import/extensions": "off",
+        "no-undef": "off",
+        "no-unused-vars": "off",
+        "no-restricted-globals": "off",
+        "no-useless-constructor": "off",
+        "import/prefer-default-export": "off",
+        "import/no-extraneous-dependencies": "off",
+        "no-restricted-syntax": "off",
+        "max-classes-per-file": "off",
+        "no-plusplus": "off",
+        "class-methods-use-this": "off",
+
+        /**
+        * Rule is incompactable with typescript
+        */
+        "no-empty-function": "warn",
+
+        "consistent-return": "warn",
+        "no-await-in-loop": "warn",
+        "no-continue": "warn"
+    }
 }

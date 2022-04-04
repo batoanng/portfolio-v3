@@ -1,17 +1,38 @@
 {
     "compilerOptions": {
         "target": "esnext",
-        "lib": ["es6", "es5", "es7", "dom"],
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
         "allowJs": true,
+        "skipLibCheck": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
-        "strict": false,
+        "strict": true,
         "forceConsistentCasingInFileNames": true,
-        "module": "commonjs",
-        "outDir": "./build",
+        "noFallthroughCasesInSwitch": true,
+        "module": "esnext",
         "moduleResolution": "node",
         "resolveJsonModule": true,
-        "skipLibCheck": true
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "outDir": "./build",
+        "noImplicitAny": false,
+        "noImplicitThis": false,
+        "noImplicitReturns": false,
+        "importHelpers": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "suppressExcessPropertyErrors": true,
+        "noUnusedLocals": false,
+        "noEmitOnError": true,
+        "traceResolution": false
     },
+    "include": [
+        "src",
+        "node_modules/@types/jest/index.d.ts"
+    ],
     "exclude": ["node_modules", "build"]
 }
