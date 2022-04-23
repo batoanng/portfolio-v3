@@ -53,7 +53,7 @@
         "ts-loader": "^9.2.8"
     },
     "resolutions": {
-        "@typed/react": ">= 16.8 <= 17.x"
+        "@types/react": ">= 16.8 <= 17.x"
     },
     "scripts": {
         "analyze": "source-map-explorer 'build/static/js/*.js'",
