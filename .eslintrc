@@ -1,27 +1,30 @@
 {
-    "parser": "@typescript-eslint/parser",
-    "extends": ["react-app", "plugin:prettier/recommended"],
-    "plugins": ["@typescript-eslint"],
+    "extends": "next/core-web-vitals",
+    "plugins": ["unused-imports", "@typescript-eslint"],
     "rules": {
-        "import/extensions": "off",
-        "no-undef": "off",
         "no-unused-vars": "off",
-        "no-restricted-globals": "off",
-        "no-useless-constructor": "off",
-        "import/prefer-default-export": "off",
-        "import/no-extraneous-dependencies": "off",
-        "no-restricted-syntax": "off",
-        "max-classes-per-file": "off",
-        "no-plusplus": "off",
-        "class-methods-use-this": "off",
-
-        /**
-        * Rule is incompactable with typescript
-        */
-        "no-empty-function": "warn",
-
-        "consistent-return": "warn",
-        "no-await-in-loop": "warn",
-        "no-continue": "warn"
-    }
+        "@typescript-eslint/no-unused-vars": "warn",
+        "unused-imports/no-unused-imports": "warn",
+        "react/no-unescaped-entities": "off"
+    },
+    "overrides": [
+        {
+            "files": ["pages/__test/**/*"],
+            "rules": {
+                "unused-imports/no-unused-imports": "off",
+                "@typescript-eslint/no-unused-vars": "off",
+                "@next/next/no-img-element": "off",
+                "react/display-name": "off"
+            }
+        },
+        {
+            "files": ["src/minimals.cc/**/*"],
+            "rules": {
+                "unused-imports/no-unused-imports": "off",
+                "@typescript-eslint/no-unused-vars": "off",
+                "@next/next/no-img-element": "off",
+                "react/display-name": "off"
+            }
+        }
+    ]
 }
